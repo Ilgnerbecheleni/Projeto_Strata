@@ -154,13 +154,20 @@ textarea:focus {
 
 .button-default {
     background-color: #49bf9d;
-    border: 2px solid #49bf9d;
+    border: 3px solid #49bf9d;
     color: white;
     padding: 0.75em 1.5em;
     border-radius: 5px;
     font-size: .8em;
     display: inline-block;
     width: auto;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button-default:hover {
+    background-color: #98ebd3;
+    border-color: transparent;
 }
 
 .button-default-stroke {
@@ -168,6 +175,12 @@ textarea:focus {
     border-color: #efefef;
     color: inherit;
     display: inline-block;
+}
+
+.button-default-stroke:hover {
+    color: #49bf9d;
+    border-color: #49bf9d;
+    background-color: white;
 }
 
 .button-default-small {
@@ -184,6 +197,50 @@ textarea:focus {
     display: block;
     text-align: center;
     display: inline-block;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0 54px 72px 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.main-footer a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    color: #49bf9d;
+}
+
+.main-footer .ul-icons a {
+    font-size: .75em;
+    border-bottom: none;
+}
+
+.copyright {
+    list-style: none;
+}
+
+.copyright li {
+    display: inline-block;
+    border-left: solid 1px rgba(255, 255, 255, 0.25);
+    padding: 0 0.75em;
+    line-height: 1;
+    font-size: .8em;
+}
+
+.copyright li:first-child {
+    border-left: 0;
+}
+
+.copyright li:last-child {
+    padding-right: 0;
 }
 
 .table {
@@ -319,5 +376,13 @@ textarea:focus {
 
 .col-1-3:nth-child(3n) {
     /* cada multiplo de 3 menos 1 */
+    margin-left: 2%;
+}
+
+.col-2-3+.col-1-3 {
+    margin-left: 2%;
+}
+
+.col-1-3+.col-2-3 {
     margin-left: 2%;
 }
